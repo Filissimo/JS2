@@ -185,7 +185,8 @@ document.addEventListener("DOMContentLoaded", () => {
                             let var2 = +(calc_text_to_verify.slice(calc_text_to_verify.indexOf("+") + 1, calc_text_to_verify.length));
                             result = var1 + var2;
                             if (result != var1) {
-                                calc_screen.setAttribute("value", calc_text_to_verify + "=" + result);
+                                let all_text = var1 + "+" + var2 + "=" + result;
+                                calc_screen.setAttribute("value", all_text);
                             }
                         }
                         if (calc_text_to_verify.indexOf("-") > -1) {
@@ -193,7 +194,8 @@ document.addEventListener("DOMContentLoaded", () => {
                             let var2 = +(calc_text_to_verify.slice(calc_text_to_verify.indexOf("-") + 1, calc_text_to_verify.length));
                             result = var1 - var2;
                             if (result != var1) {
-                                calc_screen.setAttribute("value", calc_text_to_verify + "=" + result);
+                                let all_text = var1 + "+" + var2 + "=" + result;
+                                calc_screen.setAttribute("value", all_text);
                             }
                         }
                         if (calc_text_to_verify.indexOf("*") > -1) {
@@ -201,7 +203,8 @@ document.addEventListener("DOMContentLoaded", () => {
                             let var2 = +(calc_text_to_verify.slice(calc_text_to_verify.indexOf("*") + 1, calc_text_to_verify.length));
                             result = var1 * var2;
                             if (result != var1) {
-                                calc_screen.setAttribute("value", calc_text_to_verify + "=" + result);
+                                let all_text = var1 + "+" + var2 + "=" + result;
+                                calc_screen.setAttribute("value", all_text);
                             }
                         }
                         if (calc_text_to_verify.indexOf("/") > -1) {
@@ -209,7 +212,8 @@ document.addEventListener("DOMContentLoaded", () => {
                             let var2 = +(calc_text_to_verify.slice(calc_text_to_verify.indexOf("/") + 1, calc_text_to_verify.length));
                             result = var1 / var2;
                             if (result != var1) {
-                                calc_screen.setAttribute("value", calc_text_to_verify + "=" + result);
+                                let all_text = var1 + "+" + var2 + "=" + result;
+                                calc_screen.setAttribute("value", all_text);
                             }
                         }
                     }
