@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    body {
+        width: 100%;
+        height: 100vh;
+        background-color: aquamarine;
+        display: flex;
+        justify-content: center;
+        margin-top: 200px;
+
+
+    }
+
+    main {
+
+        width: 700px;
+        height: 700px;
+        background-color: cornsilk;
+        padding-top: 20px;
+
+
+    }
+
+    h1 {
+
+        color: brown;
+        font-size: 50px;
+        font-family: Cambria;
+        margin: 0;
+        margin-top: 30px;
+        margin-left: 200px;
+
+    }
+
+    section {
+        position: relative;
+        top: 100px;
+        left: 0;
+    }
+
+
+
+    .result input {
+        position: absolute;
+        bottom: 85%;
+        left: 23%;
+        height: 70px;
+        width: 400px;
+        font-size: 50px;
+        color: blue;
+        border: 2px solid black;
+        margin-bottom: 30px;
+        padding: 20px;
+
+
+    }
+
+    .var1 input {
+        height: 40px;
+        font-size: 20px;
+        font-weight: 400;
+        color: rgb(18, 67, 226);
+        margin-top: 50px;
+
+
+    }
+
+    .var2 input {
+        height: 40px;
+        font-size: 20px;
+        font-weight: 400;
+        color: rgb(18, 67, 226);
+        margin-right: 10px;
+        margin-top: 50px;
+    }
+
+    .var3 input {
+        height: 40px;
+        font-size: 20px;
+        font-weight: 400;
+        color: rgb(18, 67, 226);
+        margin-left: 10px;
+        margin-top: 50px;
+    }
+
+    .var4 input {
+        height: 40px;
+        font-size: 20px;
+        font-weight: 400;
+        color: rgb(18, 67, 226);
+        margin-right: 60px;
+        margin-top: 50px;
+    }
+
+    .var5 input {
+        height: 40px;
+        font-size: 20px;
+        font-weight: 400;
+        color: rgb(18, 67, 226);
+
+        margin-top: 50px;
+    }
+
+    .var6 input {
+        height: 40px;
+        font-size: 20px;
+        font-weight: 400;
+        color: rgb(18, 67, 226);
+        margin-right: 50px;
+        margin-top: 50px;
+    }
+
+    .var7 input {
+        height: 40px;
+        font-size: 20px;
+        font-weight: 400;
+        color: rgb(18, 67, 226);
+
+        margin-top: 50px;
+    }
+
+    .var8 input {
+        height: 40px;
+        font-size: 20px;
+        font-weight: 400;
+        color: rgb(18, 67, 226);
+        margin-right: 55px;
+        margin-top: 50px;
+    }
+
+    div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: 20px;
+
+    }
+
+    h4 {
+        font-size: 30px;
+        transform: translateX(316px);
+
+        margin-top: 50px;
+    }
+
+    button {
+        height: 30px;
+        width: 60px;
+        transform: translate(80px, 190px);
+
+    }
+</style>
+
+<body>
+
+    <main>
+        <span class="span1">
+            <button onclick="count()">
+                <h3>Жми</h3>
+            </button>
+        </span class="reset1">
+        
+        <span>
+
+        </span>
+        <h1>Калькулятор 1</h1>
+        <section class="section1">
+            <div>
+
+                <h4>+</h4>
+                <span class="var1"><input type="text" name="var1" id=""></span>
+
+                <span class="var2"><input type="text" name="var2" id=""></span>
+                <span class="result"><input type="text" name="result" disabled></span>
+                <script>
+                    function count() {
+                        let int1 = +document.querySelector('[name ="var1"]').value;
+                        let int2 = +document.querySelector('[name ="var2"]').value;
+                        document.querySelector('[name ="result"]').value = int1 + int2;
+                    }
+
+                    
+                </script>
+
+            </div>
+            <div>
+                <h4>-</h4>
+                <span class="var3"><input type="text" name="var3" id=""></span>
+
+                <span class="var4"><input type="text" name="var4" id=""></span>
+                <!-- <span class="result"><input type="text" name="result" disabled></span> -->
+
+                <script>
+                    function count() {
+                        let int3 = +document.querySelector('[name ="var3"]').value;
+                        let int4 = +document.querySelector('[name ="var4"]').value;
+                        document.querySelector('[name ="result"]').value = int3 - int4;
+                    }
+                </script>
+
+
+            </div>
+            <div>
+                <h4>/</h4>
+                <span class="var5"><input type="text" name="var5" id=""></span>
+
+                <span class="var6"><input type="text" name="var6" id=""></span>
+                <!-- <span class="result"><input type="text" name="result" disabled></span> -->
+
+                <script>
+                    function count() {
+                        let int5 = +document.querySelector('[name ="var5"]').value;
+                        let int6 = +document.querySelector('[name ="var6"]').value;
+                        document.querySelector('[name ="result"]').value = int5 / int6;
+                    }
+                </script>
+
+
+
+            </div>
+            <div>
+                <h4>*</h4>
+                <span class="var7"><input type="text" name="var7" id=""></span>
+
+                <span class="var8"><input type="text" name="var8" id=""></span>
+                <!-- <span class="result"><input type="text" name="result" disabled></span> -->
+
+                <script>
+                    function count() {
+                        let int7 = +document.querySelector('[name ="var7"]').value;
+                        let int8 = +document.querySelector('[name ="var8"]').value;
+                        document.querySelector('[name ="result"]').value = int7 * int8;
+                    }
+                </script>
+            </div>
+
+
+
+
+        </section>
+
+
+    </main>
+    <!-- <script>
+        function count() {
+            let int1 = +document.querySelector('[name ="var1"]').value;
+            let int2 = +document.querySelector('[name ="var2"]').value;
+            document.querySelector('[name ="result"]').value = int1 + int2;
+        }
+    </script>  -->
+
+</body>
+
+</html>

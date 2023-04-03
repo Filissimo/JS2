@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+body {
+    font-size: 20pt;
+}
+header {
+    background-color: rgb(63, 255, 255);
+    padding: 1rem;
+}
+section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#gallery {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 1vw;
+
+}
+#gallery img {
+    padding: 0.1vh, 0.1vw;
+    box-sizing: border-box;
+}
+
+#black_box {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+
+.black_box_hidden {
+    z-index: -10;
+    opacity: 0;
+}
+
+.black_box_shown {
+    z-index: 9;
+    opacity: 0.8;
+}
+
+.img_out_of_cursor {
+    width: 22vw;
+    height: 24vh;
+    border: 1rem solid rgba(0, 0, 0, 0);
+    opacity: 0.8;
+    transition: all 0.5s;
+}
+
+.img_in_cursor {
+    width: 22vw;
+    height: 24vh;
+    border: 1px solid rgb(0, 0, 0);
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.img_show {
+    z-index: 10;
+    width: 75vw;
+    height: 75vh;
+    transition: all 1s;
+}
+
+.img_shrink {
+    width: 1vw;
+    height: 1vh;
+    transition: all 0.3s;
+}
+
+.nav_button {
+    position: absolute;
+    z-index: 8;
+    top: 2rem;
+    left: 2rem;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 100%;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+nav {
+    position: fixed;
+    z-index: 7;
+    display: flex;
+    gap: 4rem;
+    background-color: aquamarine;
+    padding: 1rem;
+    border-radius: 1rem;
+    top: 1rem;
+}
+
+nav ul {
+    padding-left: 12rem;
+}
+
+nav ul li {
+    padding: 0.2rem;
+}
+
+.nav_hidden {
+    left: -25rem;
+    transition: all 1sec;
+}
+
+.nav_shown {
+    left: 1rem;
+    transition: all 1sec;
+}
+
+/* Калькулятор */
+
+#calculator {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 20rem;
+    align-self: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+#screen {
+    font-size: 1.92rem;
+    border: 3px solid rgb(136, 136, 136);
+    margin-bottom: 1rem;
+}
+
+#calculator .btn {
+    width: 4rem;
+    font-size: 3rem;
+    border: 2px solid blue;
+    border-radius: 1rem;
+    gap: 1rem;
+    background-color: rgb(254, 213, 151);
+}
+
+#calculator .btn:hover {
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(255, 247, 142);
+}
