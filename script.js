@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             let var2 = +(calc_text_to_verify.slice(calc_text_to_verify.indexOf("-") + 1, calc_text_to_verify.length));
                             result = var1 - var2;
                             if (result != var1) {
-                                let all_text = var1 + "+" + var2 + "=" + result;
+                                let all_text = var1 + "-" + var2 + "=" + result;
                                 calc_screen.setAttribute("value", all_text);
                             }
                         }
@@ -202,8 +202,8 @@ document.addEventListener("DOMContentLoaded", () => {
                             let var1 = +calc_text_to_verify.slice(0, calc_text_to_verify.indexOf("*"));
                             let var2 = +(calc_text_to_verify.slice(calc_text_to_verify.indexOf("*") + 1, calc_text_to_verify.length));
                             result = var1 * var2;
-                            if (result != var1) {
-                                let all_text = var1 + "+" + var2 + "=" + result;
+                            if (result != 0) {
+                                let all_text = var1 + "*" + var2 + "=" + result;
                                 calc_screen.setAttribute("value", all_text);
                             }
                         }
@@ -211,8 +211,8 @@ document.addEventListener("DOMContentLoaded", () => {
                             let var1 = +calc_text_to_verify.slice(0, calc_text_to_verify.indexOf("/"));
                             let var2 = +(calc_text_to_verify.slice(calc_text_to_verify.indexOf("/") + 1, calc_text_to_verify.length));
                             result = var1 / var2;
-                            if (result != var1) {
-                                let all_text = var1 + "+" + var2 + "=" + result;
+                            if (result != Infinity) {
+                                let all_text = var1 + "/" + var2 + "=" + result;
                                 calc_screen.setAttribute("value", all_text);
                             }
                         }
